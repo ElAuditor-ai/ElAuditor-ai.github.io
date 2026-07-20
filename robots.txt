@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://elauditor-ai.github.io/sitemap.xml
