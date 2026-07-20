@@ -1,1192 +1,1287 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚖️ Правовая Защита — Юридические услуги по банкротству</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #e0e0e0;
-            background: #0a0a0a;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Disclaimer */
-        .disclaimer {
-            background: #1a1a1a;
-            border-left: 4px solid #c9a96e;
-            padding: 15px 20px;
-            font-size: 0.8rem;
-            color: #888;
-            text-align: center;
-            border-bottom: 1px solid #222;
-        }
+  <!-- Основные мета-теги SEO -->
+  <title>Банкротство физических лиц 2026 — Юрист по долгам | Правовая Защита</title>
+  <meta name="description" content="Юридические услуги по банкротству физических лиц, реструктуризации долгов, защите от коллекторов. Бесплатная консультация. Работаем по всей России. Судебное и внесудебное банкротство.">
+  <meta name="keywords" content="банкротство физических лиц, юрист по долгам, реструктуризация долгов, защита от коллекторов, внесудебное банкротство, банкротство через МФЦ, списание долгов, банкротство 2026">
+  <meta name="author" content="Правовая Защита">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://elauditor-ai.github.io/">
 
-        /* Header */
-        header {
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #222;
-        }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo { font-size: 1.4rem; font-weight: bold; color: #fff; }
-        .logo span { color: #c9a96e; }
-        nav ul { display: flex; list-style: none; gap: 25px; }
-        nav a { color: #aaa; text-decoration: none; font-weight: 500; transition: color 0.3s; font-size: 0.9rem; }
-        nav a:hover { color: #c9a96e; }
-        .contacts-header {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 3px;
-        }
-        .contacts-header a {
-            color: #c9a96e;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-        .contacts-header a:hover { color: #fff; }
-        .contacts-header span { color: #666; font-size: 0.75rem; }
+  <!-- Open Graph для соцсетей -->
+  <meta property="og:title" content="Банкротство физических лиц 2026 — Правовая Защита">
+  <meta property="og:description" content="Юридические услуги по банкротству и защите от долгов. Бесплатная консультация. Работаем по всей России.">
+  <meta property="og:url" content="https://elauditor-ai.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Правовая Защита">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:image" content="https://elauditor-ai.github.io/og-image.jpg">
 
-        /* Hero */
-        .hero {
-            margin-top: 60px;
-            background: linear-gradient(135deg, rgba(10,10,10,0.92) 0%, rgba(20,20,20,0.88) 100%),
-                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80') center/cover no-repeat;
-            color: white;
-            padding: 120px 0 100px;
-            text-align: left;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero .container { position: relative; z-index: 1; }
-        .hero h1 { 
-            font-size: 3.2rem; 
-            margin-bottom: 20px; 
-            font-weight: 800;
-            line-height: 1.2;
-            text-transform: uppercase;
-        }
-        .hero h1 .highlight { color: #c9a96e; }
-        .hero p { 
-            font-size: 1.3rem; 
-            margin-bottom: 15px; 
-            opacity: 0.8;
-            color: #ccc;
-        }
-        .hero .sub-text {
-            font-size: 1rem;
-            color: #888;
-            margin-bottom: 40px;
-        }
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Банкротство физических лиц 2026 — Правовая Защита">
+  <meta name="twitter:description" content="Юридические услуги по банкротству и защите от долгов. Бесплатная консультация.">
+  <meta name="twitter:image" content="https://elauditor-ai.github.io/og-image.jpg">
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 18px 40px;
-            background: #c9a96e;
-            color: #0a0a0a;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .btn:hover { 
-            background: #d4b87a; 
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(201, 169, 110, 0.4);
-        }
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #c9a96e;
-            color: #c9a96e;
-        }
-        .btn-outline:hover {
-            background: #c9a96e;
-            color: #0a0a0a;
-            box-shadow: 0 10px 30px rgba(201, 169, 110, 0.3);
-        }
-        .btn-dark {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            color: #c9a96e;
-        }
-        .btn-dark:hover {
-            background: #222;
-            border-color: #c9a96e;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        .btn-icon {
-            width: 30px;
-            height: 30px;
-            background: rgba(10,10,10,0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-        }
+  <!-- Schema.org — Организация (LegalService) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Правовая Защита",
+    "alternateName": "Юрист по долгам — Правовая Защита",
+    "description": "Юридические услуги по банкротству физических лиц, реструктуризации долгов, защите от коллекторов и приставов. Бесплатная консультация. Работаем по всей России.",
+    "url": "https://elauditor-ai.github.io/",
+    "logo": "https://elauditor-ai.github.io/logo.png",
+    "image": "https://elauditor-ai.github.io/og-image.jpg",
+    "telephone": "+7-XXX-XXX-XX-XX",
+    "email": "info@elauditor-ai.github.io",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "RU",
+      "addressRegion": "Россия"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Россия"
+    },
+    "serviceType": [
+      "Банкротство физических лиц",
+      "Внесудебное банкротство через МФЦ",
+      "Реструктуризация долгов через суд",
+      "Защита от коллекторов",
+      "Защита от приставов",
+      "Восстановление кредитной истории",
+      "Защита семей участников военных действий"
+    ],
+    "priceRange": "₽",
+    "openingHours": "Mo-Fr 09:00-20:00, Sa 10:00-16:00",
+    "sameAs": [
+      "https://t.me/your_channel",
+      "https://vk.com/your_group"
+    ]
+  }
+  </script>
 
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 30px;
+  <!-- Schema.org — FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Можно ли списать долги по ипотеке через банкротство?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Единственное жильё, приобретённое за счёт ипотечных средств, не подлежит реализации. Долг может быть реструктуризирован или включён в план реструктуризации. С 3 апреля 2026 года при продаже залогового жилья: 10% — должнику, 80% — банку, 10% — на второстепенные долги. Для семей военных — дополнительные льготы."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Что будет с кредитной историей после банкротства?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Запись о банкротстве хранится в БКИ 5 лет. Все долги отмечаются как погашенные. После 5 лет — полное удаление. В течение 5 лет при получении кредита обязаны предупреждать банк о статусе."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли банкротиться повторно?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "По собственному заявлению — не ранее чем через 5 лет после завершения предыдущей процедуры. Если кредиторы инициируют — ограничений по срокам нет."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Сколько стоит банкротство в 2026 году?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Обязательные расходы: госпошлина 300 ₽ + депозит суда 25 000 ₽. Услуги юриста: от 50 000 ₽ (внесудебное) до 200 000–300 000 ₽ (судебное «под ключ»). Внесудебное банкротство через МФЦ дешевле — без оплаты управляющего. С 2026 года часть справок собирается автоматически через ЕФРСБ."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Какие долги НЕ освобождают от исполнения при банкротстве?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Не подлежат освобождению: алименты, компенсация вреда здоровью или жизни, не выплаченная зарплата работникам (для ИП), субсидиарная ответственность, некоторые административные штрафы. Все остальные долги — кредиты, микрозаймы, ЖКХ, налоги, штрафы ГИБДД — могут быть включены."
+        }
+      }
+    ]
+  }
+  </script>
 
-        /* Checkmark list */
-        .check-list { margin: 30px 0; }
-        .check-list-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-        .check-icon {
-            width: 40px;
-            height: 40px;
-            background: #c9a96e;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #0a0a0a;
-            font-size: 1.2rem;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
+  <!-- Schema.org — HowTo (Как мы работаем) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Как пройти процедуру банкротства",
+    "description": "Пошаговая инструкция по банкротству физических лиц с юристом Правовая Защита",
+    "totalTime": "PT6M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Бесплатная консультация",
+        "text": "Анализ вашей ситуации, оценка долгов, подбор процедуры",
+        "url": "https://elauditor-ai.github.io/#consultation"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Сбор документов",
+        "text": "Помогаем собрать справки, выписки, договоры. Часть данных собирается автоматически через ЕФРСБ",
+        "url": "https://elauditor-ai.github.io/#documents"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Подача заявления",
+        "text": "Подготовка и подача в суд или МФЦ в электронной форме",
+        "url": "https://elauditor-ai.github.io/#application"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Сопровождение дела",
+        "text": "Представление ваших интересов на всех этапах, переговоры с кредиторами",
+        "url": "https://elauditor-ai.github.io/#support"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Завершение процедуры",
+        "text": "Получение решения суда об освобождении от долгов или утверждение плана реструктуризации",
+        "url": "https://elauditor-ai.github.io/#completion"
+      }
+    ]
+  }
+  </script>
 
-        /* Stats */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            padding: 60px 0;
-            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
-        }
-        .stat-item {
-            text-align: center;
-            padding: 20px;
-        }
-        .stat-number {
-            font-size: 2.2rem;
-            color: #c9a96e;
-            font-weight: 800;
-        }
-        .stat-label { color: #888; font-size: 0.85rem; margin-top: 10px; }
+  <!-- Schema.org — BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Главная",
+        "item": "https://elauditor-ai.github.io/"
+      }
+    ]
+  }
+  </script>
 
-        /* Services */
-        .services { 
-            padding: 80px 0; 
-            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%),
-                        url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80') center/cover fixed;
-            background-blend-mode: overlay;
-            position: relative;
-        }
-        .services::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(10,10,10,0.92);
-            pointer-events: none;
-        }
-        .services .container { position: relative; z-index: 1; }
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            color: #fff;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        .section-title span { color: #c9a96e; }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        .service-card {
-            background: rgba(17, 17, 17, 0.9);
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #222;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(5px);
-        }
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 4px;
-            height: 100%;
-            background: #c9a96e;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .service-card:hover {
-            border-color: #c9a96e;
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        }
-        .service-card:hover::before { opacity: 1; }
-        .service-card h3 {
-            color: #fff;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        .service-card p { color: #888; font-size: 0.95rem; line-height: 1.7; }
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #c9a96e;
-        }
+  <!-- Schema.org — WebSite (поиск по сайту) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Правовая Защита",
+    "url": "https://elauditor-ai.github.io/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://elauditor-ai.github.io/?search={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 
-        /* Process */
-        .process { 
-            padding: 80px 0; 
-            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%),
-                        url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80') center/cover fixed;
-            background-blend-mode: overlay;
-            position: relative;
-        }
-        .process::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(15,15,15,0.92);
-            pointer-events: none;
-        }
-        .process .container { position: relative; z-index: 1; }
-        .steps {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .step {
-            flex: 1;
-            min-width: 200px;
-            text-align: center;
-            padding: 30px;
-            background: rgba(17, 17, 17, 0.9);
-            border-radius: 12px;
-            border: 1px solid #222;
-            position: relative;
-            backdrop-filter: blur(5px);
-        }
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: #c9a96e;
-            color: #0a0a0a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 800;
-            margin: 0 auto 20px;
-        }
-        .step h4 { color: #fff; margin-bottom: 10px; font-size: 1.1rem; }
-        .step p { color: #888; font-size: 0.9rem; }
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-        /* Content Section */
-        .content-section { 
-            padding: 80px 0; 
-            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%),
-                        url('https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=1920&q=80') center/cover fixed;
-            background-blend-mode: overlay;
-            position: relative;
-        }
-        .content-section::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(10,10,10,0.93);
-            pointer-events: none;
-        }
-        .content-section .container { position: relative; z-index: 1; }
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: start;
-        }
-        .content-text h3 {
-            color: #fff;
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        .content-text h3 span { color: #c9a96e; }
-        .content-text p { color: #aaa; margin-bottom: 15px; line-height: 1.8; }
-        .content-text ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .content-text li {
-            padding: 10px 0;
-            padding-left: 30px;
-            position: relative;
-            color: #aaa;
-        }
-        .content-text li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #c9a96e;
-            font-weight: bold;
-        }
-        .highlight-box {
-            background: rgba(17, 17, 17, 0.9);
-            padding: 25px;
-            border-radius: 10px;
-            margin: 20px 0;
-            border-left: 4px solid #c9a96e;
-            backdrop-filter: blur(5px);
-        }
-        .highlight-box strong { color: #c9a96e; }
-        .highlight-box p { color: #aaa; margin: 5px 0; }
-        .warning-box {
-            background: rgba(26, 18, 0, 0.9);
-            border-left: 4px solid #ff9800;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 10px 10px 0;
-            backdrop-filter: blur(5px);
-        }
-        .warning-box strong { color: #ff9800; }
-        .warning-box p { color: #aaa; margin: 5px 0; }
-
-        /* Calculator */
-        .calculator {
-            background: linear-gradient(135deg, #111 0%, #1a1a1a 100%),
-                        url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80') center/cover fixed;
-            background-blend-mode: overlay;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
-            position: relative;
-        }
-        .calculator::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(17,17,17,0.92);
-            pointer-events: none;
-        }
-        .calculator .container { position: relative; z-index: 1; }
-        .calc-form {
-            max-width: 600px;
-            margin: 30px auto;
-            background: rgba(10, 10, 10, 0.9);
-            color: #e0e0e0;
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #222;
-            backdrop-filter: blur(10px);
-        }
-        .form-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #c9a96e;
-        }
-        .form-group input, .form-group select {
-            width: 100%;
-            padding: 14px;
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 8px;
-            font-size: 1rem;
-            color: #fff;
-        }
-        .form-group input:focus, .form-group select:focus {
-            outline: none;
-            border-color: #c9a96e;
-        }
-
-        /* FAQ */
-        .faq { 
-            padding: 80px 0; 
-            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%),
-                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80') center/cover fixed;
-            background-blend-mode: overlay;
-            position: relative;
-        }
-        .faq::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(15,15,15,0.93);
-            pointer-events: none;
-        }
-        .faq .container { position: relative; z-index: 1; }
-        .faq-item {
-            background: rgba(17, 17, 17, 0.9);
-            margin-bottom: 15px;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid #222;
-            backdrop-filter: blur(5px);
-        }
-        .faq-question {
-            padding: 20px 25px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            color: #fff;
-            background: rgba(17, 17, 17, 0.9);
-            transition: background 0.3s;
-        }
-        .faq-question:hover { background: rgba(26, 26, 26, 0.9); }
-        .faq-answer {
-            padding: 0 25px 20px;
-            color: #888;
-            display: none;
-            line-height: 1.7;
-        }
-        .faq-item.active .faq-answer { display: block; }
-        .faq-item.active .faq-question { background: rgba(26, 26, 26, 0.9); color: #c9a96e; }
-
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%),
-                        url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80') center/cover fixed;
-            background-blend-mode: overlay;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-            border-top: 1px solid #222;
-            position: relative;
-        }
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(10,10,10,0.92);
-            pointer-events: none;
-        }
-        .contact-section .container { position: relative; z-index: 1; }
-        .contact-section h2 { font-size: 2.2rem; margin-bottom: 10px; }
-        .contact-section h2 span { color: #c9a96e; }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 50px;
-        }
-        .contact-card {
-            background: rgba(17, 17, 17, 0.9);
-            padding: 35px 25px;
-            border-radius: 12px;
-            border: 1px solid #222;
-            transition: all 0.3s;
-            backdrop-filter: blur(5px);
-            word-break: break-word;
-            overflow-wrap: break-word;
-        }
-        .contact-card:hover {
-            border-color: #c9a96e;
-            transform: translateY(-5px);
-        }
-        .contact-card a {
-            color: #c9a96e;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 700;
-            word-break: break-all;
-            overflow-wrap: break-word;
-            display: inline-block;
-            max-width: 100%;
-        }
-        .contact-card a:hover { color: #fff; }
-        .contact-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        .contact-card h3 { color: #fff; margin-bottom: 10px; font-size: 1.1rem; }
-        .contact-card p { color: #666; font-size: 0.9rem; margin-top: 10px; }
-
-        /* Footer */
-        footer {
-            background: #050505;
-            color: #666;
-            padding: 50px 0 30px;
-            text-align: center;
-            border-top: 1px solid #222;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            text-align: left;
-            margin-bottom: 40px;
-        }
-        .footer-grid h4 { margin-bottom: 20px; color: #c9a96e; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
-        .footer-grid a { color: #666; text-decoration: none; display: block; padding: 8px 0; transition: color 0.3s; }
-        .footer-grid a:hover { color: #c9a96e; }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-content { flex-direction: column; gap: 15px; }
-            .contacts-header { align-items: center; }
-            nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
-            .hero { margin-top: 100px; padding: 60px 0; }
-            .hero h1 { font-size: 1.8rem; }
-            .content-grid { grid-template-columns: 1fr; }
-            .stats { grid-template-columns: repeat(2, 1fr); }
-            .footer-grid { grid-template-columns: 1fr; text-align: center; }
-            .steps { flex-direction: column; }
-            .contact-grid { grid-template-columns: 1fr; }
-            .hero-buttons { justify-content: center; }
-            .contact-card { padding: 30px 20px; }
-            .contact-card a { font-size: 0.9rem; }
-        }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0a0a0a; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #c9a96e; }
-    </style>
+  <!-- Preconnect для ускорения загрузки -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <style>
+    :root {
+      --primary: #1a3a5c;
+      --primary-light: #2a5a8c;
+      --accent: #c9a227;
+      --accent-hover: #d4b33a;
+      --bg: #f8f9fa;
+      --bg-dark: #0f1f33;
+      --text: #2c3e50;
+      --text-light: #5a6a7a;
+      --white: #ffffff;
+      --danger: #c0392b;
+      --success: #27ae60;
+      --border: #e0e4e8;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --shadow-hover: 0 8px 30px rgba(0,0,0,0.12);
+      --radius: 12px;
+      --transition: all 0.3s ease;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 4px; }
+    .top-bar {
+      background: var(--danger);
+      color: var(--white);
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    header {
+      background: var(--white);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-icon { font-size: 26px; }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 15px;
+      transition: var(--transition);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: var(--transition);
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--accent-hover); transform: translateY(-2px); }
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--primary);
+    }
+    .hero {
+      background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary) 100%);
+      color: var(--white);
+      padding: 100px 20px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: rgba(201, 162, 39, 0.1);
+      border-radius: 50%;
+      animation: float 8s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-30px) rotate(5deg); }
+    }
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(201, 162, 39, 0.2);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero-subtitle {
+      font-size: 20px;
+      opacity: 0.9;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-cta-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(201, 162, 39, 0.4);
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(201, 162, 39, 0.5);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--white);
+    }
+    .stats-bar {
+      background: var(--white);
+      padding: 40px 20px;
+      box-shadow: var(--shadow);
+      margin-top: -40px;
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: var(--radius);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+    .stat-item h3 {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+    .stat-item p {
+      font-size: 14px;
+      color: var(--text-light);
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-header h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .section-header p {
+      font-size: 18px;
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .section-accent {
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      margin: 16px auto 0;
+      border-radius: 2px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: var(--transition);
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+    .service-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .service-card p {
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    .process-section { background: var(--bg); }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      position: relative;
+    }
+    .process-grid::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--primary-light));
+      z-index: 0;
+    }
+    .process-step {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .step-number {
+      width: 80px;
+      height: 80px;
+      background: var(--white);
+      border: 3px solid var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent);
+      margin: 0 auto 20px;
+      box-shadow: var(--shadow);
+    }
+    .process-step h4 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .process-step p {
+      font-size: 14px;
+      color: var(--text-light);
+    }
+    .info-section { background: var(--white); }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    .info-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 32px;
+      border-left: 4px solid var(--accent);
+    }
+    .info-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .info-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .info-card ul li {
+      padding: 8px 0;
+      padding-left: 24px;
+      position: relative;
+      font-size: 15px;
+      color: var(--text);
+    }
+    .info-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: 700;
+    }
+    .info-card .warning {
+      background: rgba(192, 57, 43, 0.08);
+      border-left: 3px solid var(--danger);
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--danger);
+    }
+    .info-card .tip {
+      background: rgba(39, 174, 96, 0.08);
+      border-left: 3px solid var(--success);
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--success);
+    }
+    .calc-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--bg-dark) 100%);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .calc-section h2 {
+      color: var(--white);
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+    .calc-form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    .calc-form input,
+    .calc-form select {
+      padding: 16px 20px;
+      border: none;
+      border-radius: 50px;
+      font-size: 15px;
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+      outline: none;
+      transition: var(--transition);
+    }
+    .calc-form input::placeholder { color: rgba(255,255,255,0.6); }
+    .calc-form input:focus,
+    .calc-form select:focus { background: rgba(255,255,255,0.2); }
+    .calc-form select option { color: var(--text); }
+    .calc-result {
+      background: rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-top: 20px;
+      font-size: 18px;
+      display: none;
+    }
+    .calc-result.show { display: block; }
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-item {
+      background: var(--white);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 20px 28px;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition);
+    }
+    .faq-question:hover { background: var(--bg); }
+    .faq-toggle {
+      font-size: 20px;
+      transition: var(--transition);
+      color: var(--accent);
+    }
+    .faq-item.active .faq-toggle { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .faq-item.active .faq-answer { max-height: 500px; }
+    .faq-answer-inner {
+      padding: 0 28px 24px;
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+    .cta-section {
+      background: linear-gradient(135deg, var(--accent) 0%, #b8941f 100%);
+      color: var(--white);
+      text-align: center;
+      border-radius: var(--radius);
+      padding: 80px 40px;
+    }
+    .cta-section h2 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .cta-section p {
+      font-size: 18px;
+      opacity: 0.95;
+      margin-bottom: 32px;
+    }
+    .cta-section .btn {
+      background: var(--white);
+      color: var(--primary);
+      font-size: 18px;
+      padding: 18px 48px;
+    }
+    .cta-section .btn:hover {
+      background: var(--bg);
+      transform: translateY(-3px);
+    }
+    footer {
+      background: var(--bg-dark);
+      color: var(--white);
+      padding: 60px 20px 30px;
+    }
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-brand h3 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      opacity: 0.7;
+      line-height: 1.7;
+    }
+    .footer-col h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 14px;
+      transition: var(--transition);
+    }
+    .footer-col ul li a:hover { color: var(--accent); }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      text-align: center;
+      font-size: 13px;
+      opacity: 0.5;
+    }
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: repeat(3, 1fr); }
+      .process-grid::before { display: none; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      .hero h1 { font-size: 32px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: 1fr; }
+      .calc-form { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      section { padding: 60px 16px; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 26px; }
+      .section-header h2 { font-size: 26px; }
+      .btn { padding: 14px 28px; font-size: 14px; }
+    }
+  </style>
 <base target="_blank">
 </head>
 <body>
+  <div class="top-bar">
+    ⚠️ <strong>Важно:</strong> Банкротство влечёт негативные последствия, включая ограничения на получение кредита и повторное банкротство в течение пяти лет. Предварительно обратитесь к своему кредитору и в МФЦ. Информация не является публичной офертой.
+  </div>
 
-    <!-- Legal Disclaimer -->
-    <div class="disclaimer">
-        <strong>Важно:</strong> Банкротство влечёт негативные последствия, в том числе ограничения на получение кредита и повторное банкротство в течение пяти лет. Предварительно обратитесь к своему кредитору и в МФЦ. Информация не является публичной офертой.
+  <header>
+    <nav>
+      <a href="/" class="logo">
+        <span class="logo-icon">⚖️</span>
+        Правовая Защита
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#process">Как работаем</a></li>
+        <li><a href="#info">Полезное</a></li>
+        <li><a href="#faq">Вопросы</a></li>
+        <li><a href="#contacts" class="nav-cta">Консультация</a></li>
+      </ul>
+      <button class="mobile-menu-btn" aria-label="Меню">☰</button>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Работаем по всей России</div>
+      <h1>Потеряли работу? Упал доход? <span>Нет денег на кредиты?</span></h1>
+      <p class="hero-subtitle">Юридические услуги по банкротству физических лиц, реструктуризации долгов, защите семей участников военных действий. Бесплатная консультация.</p>
+      <div class="hero-cta-group">
+        <a href="#contacts" class="btn btn-primary">📞 Бесплатная консультация</a>
+        <a href="#services" class="btn btn-secondary">Узнать больше →</a>
+      </div>
     </div>
+  </section>
 
-    <!-- Header -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">⚖️ <span>Правовая</span> Защита</div>
-            <nav>
-                <ul>
-                    <li><a href="#services">Услуги</a></li>
-                    <li><a href="#process">Как работаем</a></li>
-                    <li><a href="#content">Полезное</a></li>
-                    <li><a href="#faq">Вопросы</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
-                </ul>
-            </nav>
-            <div class="contacts-header">
-                <a href="tel:+79022513181">+7 (902) 251-31-81</a>
-                <span>Пн–Пт, 10:00–18:00 МСК</span>
-            </div>
+  <div class="stats-bar">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>1,8 млн+</h3>
+        <p>граждан прошли процедуру банкротства с 2015 года</p>
+      </div>
+      <div class="stat-item">
+        <h3>до 1 млн ₽</h3>
+        <p>порог для внесудебного банкротства через МФЦ (2026)</p>
+      </div>
+      <div class="stat-item">
+        <h3>6–12 мес</h3>
+        <p>средний срок процедуры банкротства</p>
+      </div>
+      <div class="stat-item">
+        <h3>500 тыс. ₽</h3>
+        <p>порог для обязательного обращения в суд</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="section-header">
+      <h2>Наши услуги</h2>
+      <p>Полный спектр юридической помощи по решению долговых проблем</p>
+      <div class="section-accent"></div>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-icon">🏛️</div>
+        <h3>Судебное банкротство (127-ФЗ)</h3>
+        <p>Процедура признания несостоятельности через арбитражный суд. Освобождение от исполнения денежных обязательств по кредитам, микрозаймам, ЖКХ, налогам и штрафам. Сохранение единственного жилья и предметов первой необходимости. Срок 6–12 месяцев.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">🏢</div>
+        <h3>Внесудебное банкротство через МФЦ</h3>
+        <p>Упрощённая процедура без участия суда. Подходит при отсутствии имущества и стабильного дохода, сумме долга до 1 000 000 ₽. Срок до 6 месяцев. Справки из ПФР, ФНС и ФССП собираются автоматически.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>Реструктуризация долгов через суд</h3>
+        <p>Составление нового графика платежей сроком до 5 лет. Понижение процентной ставки до ключевой ставки ЦБ. Сохранение имущества и кредитной истории. Альтернатива банкротству при наличии стабильного дохода.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">📈</div>
+        <h3>Восстановление кредитной истории</h3>
+        <p>Консультации по исправлению кредитной истории после завершения процедуры. Оспаривание неправомерных записей в БКИ. Рекомендации по получению кредитов после банкротства.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">🛡️</div>
+        <h3>Защита семей участников военных действий</h3>
+        <p>Оформление льготных статусов, защита от взыскания на единственное жильё, отсрочка по кредитам, списание ипотеки при гибели военнослужащего, социальные гарантии, налоговые льготы.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">⚖️</div>
+        <h3>Защита от коллекторов и приставов</h3>
+        <p>Прекращение незаконных действий коллекторов. Снятие арестов со счетов и имущества. Оспаривание неправомерных исполнительных производств. Составление жалоб в Роспотребнадзор и прокуратуру.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="process-section" id="process">
+    <div class="section-header">
+      <h2>Как мы работаем</h2>
+      <p>Пять простых шагов к свободе от долгов</p>
+      <div class="section-accent"></div>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-number">1</div>
+        <h4>Бесплатная консультация</h4>
+        <p>Анализ вашей ситуации, оценка долгов, подбор процедуры</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">2</div>
+        <h4>Сбор документов</h4>
+        <p>Помогаем собрать справки, выписки, договоры. Часть данных собирается автоматически через ЕФРСБ</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">3</div>
+        <h4>Подача заявления</h4>
+        <p>Подготовка и подача в суд или МФЦ в электронной форме</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">4</div>
+        <h4>Сопровождение дела</h4>
+        <p>Представление ваших интересов на всех этапах, переговоры с кредиторами</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">5</div>
+        <h4>Завершение процедуры</h4>
+        <p>Получение решения суда об освобождении от долгов или утверждение плана реструктуризации</p>
+      </div>
+    </div>
+  </section>
+  <section class="info-section" id="info">
+    <div class="section-header">
+      <h2>Полезная информация</h2>
+      <p>Всё о банкротстве физических лиц в 2026 году</p>
+      <div class="section-accent"></div>
+    </div>
+    <div class="info-grid">
+      <article class="info-card">
+        <h3>🏛️ Судебное банкротство по 127-ФЗ</h3>
+        <p style="margin-bottom:16px; color:var(--text-light);">Федеральный закон № 127-ФЗ «О несостоятельности (банкротстве)» с 2015 года позволяет гражданам официально освободиться от исполнения непосильных денежных обязательств.</p>
+        <p style="font-weight:600; margin-bottom:8px;">Когда обязательно обращение в суд:</p>
+        <p style="margin-bottom:16px; color:var(--text-light);">Сумма долгов более <strong>500 000 ₽</strong> + невозможность платить в течение <strong>30 дней</strong>. Гражданин обязан подать заявление в течение 30 дней с момента осознания невозможности погашения.</p>
+        <p style="font-weight:600; margin-bottom:8px;">Когда можно добровольно:</p>
+        <p style="margin-bottom:16px; color:var(--text-light);">При любой сумме долга по праву «предвидения банкротства» — когда платёж по кредитам сравнялся с доходом. На практике процедура целесообразна примерно от 250 000–300 000 ₽ с учётом расходов.</p>
+        <div class="warning">⚠️ <strong>Важно (2026):</strong> Кредиторы могут инициировать банкротство должника только при сумме долга свыше <strong>2 000 000 ₽</strong> (ранее — 300 000 ₽). Это защищает граждан от преждевременного банкротства кредиторами.</div>
+        <ul style="margin-top:16px;">
+          <li>Освобождение от исполнения обязательств по кредитам, микрозаймам, ЖКХ, налогам, штрафам</li>
+          <li>Прекращение звонков коллекторов с момента подачи заявления</li>
+          <li>Сохраняется единственное жильё (не в залоге)</li>
+          <li>Сохраняются личные вещи и предметы первой необходимости</li>
+          <li>Процедура занимает 6–12 месяцев</li>
+          <li>Повторное банкротство по собственному заявлению — не ранее чем через 5 лет</li>
+          <li>С 2026 года все документы подаются через ЕФРСБ в электронной форме</li>
+        </ul>
+        <p style="margin-top:16px; font-size:14px; color:var(--text-light);"><strong>Не освобождают:</strong> алименты, компенсация вреда здоровью/жизни, не выплаченная зарплата, субсидиарная ответственность.</p>
+      </article>
+
+      <article class="info-card">
+        <h3>🏢 Внесудебное банкротство через МФЦ</h3>
+        <p style="margin-bottom:16px; color:var(--text-light);">Упрощённая процедура без участия арбитражного суда. С 2026 года порог повышен, автоматизирован сбор справок.</p>
+        <p style="font-weight:600; margin-bottom:8px;">Условия для МФЦ (2026):</p>
+        <ul style="margin-bottom:16px;">
+          <li>Сумма долга до <strong>1 000 000 ₽</strong> (ранее 500 000 ₽)</li>
+          <li>Отсутствие имущества для реализации</li>
+          <li>Отсутствие стабильного дохода</li>
+          <li>Нет споров с кредиторами</li>
+          <li>Не проходили процедуру в последние 5 лет</li>
+        </ul>
+        <ul style="margin-bottom:16px;">
+          <li>Минимальные затраты (без оплаты финансового управляющего)</li>
+          <li>Срок до 6 месяцев</li>
+          <li>Не требуется посещение суда</li>
+          <li>Можно подать в любом МФЦ по месту жительства</li>
+          <li>Те же гарантии сохранения жилья</li>
+          <li>С 2026 года справки из ПФР, ФНС и ФССП собираются автоматически</li>
+          <li>Последствия аналогичны судебной процедуре</li>
+        </ul>
+        <div class="tip">💡 <strong>Совет:</strong> Если у вас есть официальный доход или имущество — лучше выбрать судебное банкротство или реструктуризацию. МФЦ подходит только для «пустых» должников без дохода и имущества.</div>
+        <div class="warning" style="margin-top:12px;">⚠️ <strong>Новое правило ипотеки (с 3 апреля 2026):</strong> При продаже залогового жилья по банкротству средства распределяются: 10% — должнику (но не более суммы первоначального взноса + внесённых платежей), 80% — залоговому кредитору, 10% — на второстепенные долги (например, алименты).</div>
+      </article>
+
+      <article class="info-card">
+        <h3>📊 Реструктуризация долгов через суд</h3>
+        <p style="margin-bottom:16px; color:var(--text-light);">Альтернатива банкротству — сохранение платёжеспособности через новый график погашения.</p>
+        <p style="font-weight:600; margin-bottom:8px;">Формула расчёта платёжеспособности (2026):</p>
+        <p style="margin-bottom:16px; background:var(--white); padding:16px; border-radius:8px; font-family:monospace; font-size:14px;">(Доход − ПМ на себя − ПМ на иждивенцев) × 60 мес = Сумма, которую можно выплатить за 5 лет</p>
+        <p style="font-style:italic; margin-bottom:16px; color:var(--text-light);">Пример: федеральный ПМ, доход 60 000 ₽, 1 ребёнок<br>60 000 − 20 644 − 18 378 = <strong>20 978 ₽/мес</strong><br>За 5 лет: <strong>1 258 680 ₽</strong></p>
+        <div class="warning">⚠️ <strong>Важно:</strong> С 2026 года срок реструктуризации может быть продлён до <strong>5 лет</strong> (ранее — до 3 лет). Суд может отказать в реализации имущества, если долг можно погасить за 5 лет.</div>
+        <ul style="margin-top:16px;">
+          <li>Срок реструктуризации: до 5 лет</li>
+          <li>Процентная ставка снижается до ключевой ставки ЦБ</li>
+          <li>Прекращается начисление пеней и штрафов</li>
+          <li>Имущество не арестовывается</li>
+          <li>Можно работать и вести бизнес</li>
+          <li>Не признаётся банкротом — меньше ограничений</li>
+          <li>Суды всё чаще утверждают планы вопреки воле кредиторов</li>
+        </ul>
+      </article>
+
+      <article class="info-card">
+        <h3>📈 Восстановление кредитной истории</h3>
+        <p style="margin-bottom:16px; color:var(--text-light);">После завершения процедуры важно восстановить доверие банков.</p>
+        <p style="font-weight:600; margin-bottom:8px;">Что происходит с КИ после банкротства:</p>
+        <ul style="margin-bottom:16px;">
+          <li>Запись о банкротстве хранится в БКИ <strong>5 лет</strong></li>
+          <li>Все долги отмечаются как погашенные</li>
+          <li>После 5 лет — полное удаление информации</li>
+          <li>В течение 5 лет обязаны предупреждать банки о статусе</li>
+        </ul>
+        <ul style="margin-bottom:16px;">
+          <li>Оспаривание неправомерных записей в БКИ (НБКИ, Эквифакс, ОКБ)</li>
+          <li>Проверка и исправление ошибок в кредитном отчёте</li>
+          <li>Консультации по получению кредитов после процедуры</li>
+          <li>Рекомендации по формированию положительной кредитной истории</li>
+        </ul>
+        <div class="tip">⚡ <strong>Быстрый старт:</strong> Оформите кредитную карту с небольшим лимитом, тратьте и погашайте вовремя — это формирует положительную историю уже через 3–6 месяцев.</div>
+      </article>
+
+      <article class="info-card">
+        <h3>🛡️ Защита семей участников военных действий</h3>
+        <p style="margin-bottom:16px; color:var(--text-light);">Специальные льготы и гарантии для семей мобилизованных, военнослужащих по контракту, ветеранов боевых действий.</p>
+        <p style="font-weight:600; margin-bottom:8px;">Основные льготы:</p>
+        <ul style="margin-bottom:16px;">
+          <li>Списание ипотеки при гибели военнослужащего</li>
+          <li>Отсрочка по кредитам на время службы</li>
+          <li>Запрет взыскания на единственное жильё</li>
+          <li>Бесплатная юридическая помощь</li>
+          <li>Приоритетное рассмотрение дел в суде</li>
+          <li>Налоговые льготы на имущество для семей мобилизованных</li>
+        </ul>
+        <ul style="margin-bottom:16px;">
+          <li>Защита от выселения из единственного жилья</li>
+          <li>Списание долгов по кредитам при получении статуса инвалида</li>
+          <li>Освобождение от транспортного налога</li>
+          <li>Льготы по ЖКХ и коммунальным платежам</li>
+          <li>Оформление статуса участника боевых действий</li>
+          <li>Помощь в получении компенсаций и выплат</li>
+        </ul>
+        <div class="warning">🔴 <strong>Важно:</strong> Семьи военных имеют право на бесплатную юридическую помощь в военной прокуратуре. Мы помогаем подготовить все документы и представлять интересы в органах власти.</div>
+      </article>
+
+      <article class="info-card">
+        <h3>⚖️ Защита от коллекторов и приставов</h3>
+        <p style="margin-bottom:16px; color:var(--text-light);">Защита ваших прав от незаконных действий взыскателей.</p>
+        <p style="font-weight:600; margin-bottom:8px;">Что НЕЛЬЗЯ коллекторам (закон № 230-ФЗ):</p>
+        <ul style="margin-bottom:16px;">
+          <li>Звонить чаще 1 раза в сутки, 2 раз в неделю, 8 раз в месяц</li>
+          <li>Звонить с 22:00 до 8:00 и в выходные</li>
+          <li>Общаться с родственниками о долге</li>
+          <li>Угрожать, оскорблять, публиковать данные должника</li>
+          <li>Посещать дом без согласия</li>
+        </ul>
+        <ul style="margin-bottom:16px;">
+          <li>Составление жалоб на незаконные действия коллекторов</li>
+          <li>Обращение в Роспотребнадзор и прокуратуру</li>
+          <li>Снятие арестов со счетов и имущества</li>
+          <li>Оспаривание неправомерных исполнительных производств</li>
+          <li>Возврат незаконно списанных средств</li>
+          <li>Защита в суде при взыскании</li>
+        </ul>
+        <div class="tip">📞 <strong>Экстренная помощь:</strong> Если коллекторы угрожают или нарушают закон — зафиксируйте факт (запись разговора, скриншоты) и обратитесь к нам. Мы подготовим жалобы во все контролирующие органы.</div>
+      </article>
+    </div>
+  </section>
+  <section>
+    <div class="calc-section">
+      <h2>Рассчитайте подходящую процедуру</h2>
+      <p style="opacity:0.9; margin-bottom:32px;">Ориентировочный расчёт на 2026 год</p>
+      <form class="calc-form" id="calcForm">
+        <input type="number" id="debtAmount" placeholder="Сумма долгов (₽)" min="0" required>
+        <select id="hasIncome" required>
+          <option value="">Есть ли официальный доход?</option>
+          <option value="yes">Да, есть официальный доход</option>
+          <option value="no">Нет официального дохода</option>
+        </select>
+        <select id="hasProperty" required>
+          <option value="">Есть ли имущество?</option>
+          <option value="yes">Да, есть имущество</option>
+          <option value="no">Нет имущества</option>
+        </select>
+        <select id="region" required>
+          <option value="">Регион</option>
+          <option value="moscow">Москва и МО</option>
+          <option value="spb">Санкт-Петербург</option>
+          <option value="other">Другой регион</option>
+        </select>
+      </form>
+      <button type="button" class="btn btn-primary" onclick="calculateProcedure()" style="font-size:18px; padding:18px 48px;">Рассчитать</button>
+      <div class="calc-result" id="calcResult"></div>
+      <p style="margin-top:20px; font-size:13px; opacity:0.7;">Расчёт носит ориентировочный характер. Точная стоимость определяется после индивидуальной консультации.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="section-header">
+      <h2>Частые вопросы</h2>
+      <p>Ответы на самые популярные вопросы о банкротстве</p>
+      <div class="section-accent"></div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Можно ли списать долги по ипотеке?
+          <span class="faq-toggle">▼</span>
         </div>
-    </header>
-
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>
-                ПОТЕРЯЛИ РАБОТУ?<br>
-                <span class="highlight">УПАЛ ДОХОД?</span><br>
-                НЕТ ДЕНЕГ<br>
-                НА ОПЛАТУ КРЕДИТОВ?
-            </h1>
-
-            <div class="check-list">
-                <div class="check-list-item">
-                    <div class="check-icon">✓</div>
-                    <span>Я знаю, что с этим делать и как решить проблему</span>
-                </div>
-            </div>
-
-            <p>Юридические услуги по банкротству физических лиц, реструктуризации долгов, защите семей участников военных действий.</p>
-            <p class="sub-text">Бесплатная консультация. Работаем по всей России.</p>
-
-            <div class="hero-buttons">
-                <a href="tel:+79022513181" class="btn">
-                    <span class="btn-icon">📞</span>
-                    ПОЗВОНИТЬ
-                </a>
-                <a href="https://wa.me/79022513181" class="btn btn-outline">
-                    <span class="btn-icon">💬</span>
-                    WHATSAPP
-                </a>
-            </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Единственное жильё, приобретённое за счёт ипотечных средств, не подлежит реализации. Долг может быть реструктуризирован или включён в план реструктуризации. С 3 апреля 2026 года при продаже залогового жилья: 10% — должнику, 80% — банку, 10% — на второстепенные долги. Для семей военных — дополнительные льготы.
+          </div>
         </div>
-    </section>
-
-    <!-- Stats -->
-    <section class="stats container">
-        <div class="stat-item">
-            <div class="stat-number">1,8 млн+</div>
-            <div class="stat-label">граждан прошли процедуру банкротства с 2015 года</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Что будет с кредитной историей после банкротства?
+          <span class="faq-toggle">▼</span>
         </div>
-        <div class="stat-item">
-            <div class="stat-number">до 1 млн ₽</div>
-            <div class="stat-label">порог для внесудебного банкротства через МФЦ (2026)</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Запись о банкротстве хранится в БКИ 5 лет. Все долги отмечаются как погашенные. После 5 лет — полное удаление. В течение 5 лет при получении кредита обязаны предупреждать банк о статусе.
+          </div>
         </div>
-        <div class="stat-item">
-            <div class="stat-number">6-12 мес</div>
-            <div class="stat-label">средний срок процедуры</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Можно ли банкротиться повторно?
+          <span class="faq-toggle">▼</span>
         </div>
-        <div class="stat-item">
-            <div class="stat-number">500 тыс. ₽</div>
-            <div class="stat-label">порог для обязательного обращения в суд</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            По собственному заявлению — не ранее чем через 5 лет после завершения предыдущей процедуры. Если кредиторы инициируют — ограничений по срокам нет.
+          </div>
         </div>
-    </section>
-
-    <!-- Services -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">НАШИ <span>УСЛУГИ</span></h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🏛️</div>
-                    <h3>Судебное банкротство (127-ФЗ)</h3>
-                    <p>Процедура признания несостоятельности через арбитражный суд. Освобождение от исполнения денежных обязательств по кредитам, микрозаймам, ЖКХ, налогам и штрафам. Сохранение единственного жилья и предметов первой необходимости. Срок 6–12 месяцев.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏢</div>
-                    <h3>Внесудебное банкротство через МФЦ</h3>
-                    <p>Упрощённая процедура без участия суда. Подходит при отсутствии имущества и стабильного дохода, сумме долга до 1 000 000 ₽ (порог повышен в 2026 году). Срок до 6 месяцев. Справки из ПФР, ФНС и ФССП собираются автоматически.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>Реструктуризация долгов через суд</h3>
-                    <p>Составление нового графика платежей сроком до 5 лет (с 2026 года). Понижение процентной ставки до ключевой ставки ЦБ. Сохранение имущества и кредитной истории. Альтернатива банкротству при наличии стабильного дохода.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📈</div>
-                    <h3>Восстановление кредитной истории</h3>
-                    <p>Консультации по исправлению кредитной истории после завершения процедуры. Оспаривание неправомерных записей в БКИ. Рекомендации по получению кредитов после банкротства.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🛡️</div>
-                    <h3>Защита семей участников военных действий</h3>
-                    <p>Оформление льготных статусов, защита от взыскания на единственное жильё, отсрочка по кредитам, списание ипотеки при гибели военнослужащего, социальные гарантии, налоговые льготы на имущество для семей мобилизованных.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">⚖️</div>
-                    <h3>Защита от коллекторов и приставов</h3>
-                    <p>Прекращение незаконных действий коллекторов. Снятие арестов со счетов и имущества. Оспаривание неправомерных исполнительных производств. Составление жалоб в Роспотребнадзор и прокуратуру.</p>
-                </div>
-            </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Сколько стоит банкротство в 2026 году?
+          <span class="faq-toggle">▼</span>
         </div>
-    </section>
-
-    <!-- Process -->
-    <section class="process" id="process">
-        <div class="container">
-            <h2 class="section-title">КАК МЫ <span>РАБОТАЕМ</span></h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h4>Бесплатная консультация</h4>
-                    <p>Анализ вашей ситуации, оценка долгов, подбор процедуры</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h4>Сбор документов</h4>
-                    <p>Помогаем собрать справки, выписки, договоры. Часть данных собирается автоматически через ЕФРСБ</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h4>Подача заявления</h4>
-                    <p>Подготовка и подача в суд или МФЦ в электронной форме</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h4>Сопровождение дела</h4>
-                    <p>Представление ваших интересов на всех этапах, переговоры с кредиторами</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <h4>Завершение процедуры</h4>
-                    <p>Получение решения суда об освобождении от долгов или утверждение плана реструктуризации</p>
-                </div>
-            </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Обязательные расходы: госпошлина 300 ₽ + депозит суда 25 000 ₽. Услуги юриста: от 50 000 ₽ (внесудебное) до 200 000–300 000 ₽ (судебное «под ключ»). Внесудебное банкротство через МФЦ дешевле — без оплаты управляющего. С 2026 года часть справок собирается автоматически через ЕФРСБ.
+          </div>
         </div>
-    </section>
-
-    <!-- Content Sections -->
-    <section class="content-section" id="content">
-        <div class="container">
-            <h2 class="section-title">ПОЛЕЗНАЯ <span>ИНФОРМАЦИЯ</span></h2>
-
-            <div class="content-grid" style="margin-bottom: 60px;">
-                <div class="content-text">
-                    <h3><span>🏛️</span> Судебное банкротство по 127-ФЗ</h3>
-                    <p>Федеральный закон № 127-ФЗ «О несостоятельности (банкротстве)» с 2015 года позволяет гражданам официально освободиться от исполнения непосильных денежных обязательств.</p>
-
-                    <div class="highlight-box">
-                        <strong>Когда обязательно обращение в суд:</strong>
-                        <p>Сумма долгов более <strong>500 000 ₽</strong> + невозможность платить в течение <strong>30 дней</strong>. Гражданин обязан подать заявление в течение 30 дней с момента осознания невозможности погашения.</p>
-                    </div>
-
-                    <div class="highlight-box">
-                        <strong>Когда можно добровольно:</strong>
-                        <p>При любой сумме долга по праву «предвидения банкротства» — когда платёж по кредитам сравнялся с доходом. На практике процедура целесообразна примерно от 250 000–300 000 ₽ с учётом расходов.</p>
-                    </div>
-
-                    <div class="warning-box">
-                        <strong>⚠️ Важно (2026):</strong>
-                        <p>Кредиторы могут инициировать банкротство должника только при сумме долга свыше <strong>2 000 000 ₽</strong> (ранее — 300 000 ₽). Это защищает граждан от преждевременного банкротства кредиторами.</p>
-                    </div>
-
-                    <ul style="margin-top: 20px;">
-                        <li>Освобождение от исполнения обязательств по кредитам, микрозаймам, ЖКХ, налогам, штрафам</li>
-                        <li>Прекращение звонков коллекторов с момента подачи заявления</li>
-                        <li>Сохраняется единственное жильё (не в залоге)</li>
-                        <li>Сохраняются личные вещи и предметы первой необходимости</li>
-                        <li>Процедура занимает 6–12 месяцев</li>
-                        <li>Повторное банкротство по собственному заявлению — не ранее чем через 5 лет</li>
-                        <li>С 2026 года все документы подаются через ЕФРСБ в электронной форме</li>
-                    </ul>
-
-                    <p style="margin-top: 15px; color: #888;"><strong style="color: #c9a96e;">Не освобождают:</strong> алименты, компенсация вреда здоровью/жизни, не выплаченная зарплата, субсидиарная ответственность.</p>
-                </div>
-
-                <div class="content-text">
-                    <h3><span>🏢</span> Внесудебное банкротство через МФЦ</h3>
-                    <p>Упрощённая процедура без участия арбитражного суда. С 2026 года порог повышен, автоматизирован сбор справок.</p>
-
-                    <div class="highlight-box">
-                        <strong>Условия для МФЦ (2026):</strong>
-                        <p>• Сумма долга до <strong>1 000 000 ₽</strong> (ранее 500 000 ₽)</p>
-                        <p>• Отсутствие имущества для реализации</p>
-                        <p>• Отсутствие стабильного дохода</p>
-                        <p>• Нет споров с кредиторами</p>
-                        <p>• Не проходили процедуру в последние 5 лет</p>
-                    </div>
-
-                    <ul style="margin-top: 20px;">
-                        <li>Минимальные затраты (без оплаты финансового управляющего)</li>
-                        <li>Срок до 6 месяцев</li>
-                        <li>Не требуется посещение суда</li>
-                        <li>Можно подать в любом МФЦ по месту жительства</li>
-                        <li>Те же гарантии сохранения жилья</li>
-                        <li>С 2026 года справки из ПФР, ФНС и ФССП собираются автоматически</li>
-                        <li>Последствия аналогичны судебной процедуре</li>
-                    </ul>
-
-                    <p style="margin-top: 20px; color: #888;"><strong style="color: #c9a96e;">💡 Совет:</strong> Если у вас есть официальный доход или имущество — лучше выбрать судебное банкротство или реструктуризацию. МФЦ подходит только для «пустых» должников без дохода и имущества.</p>
-
-                    <div class="warning-box">
-                        <strong>⚠️ Новое правило ипотеки (с 3 апреля 2026):</strong>
-                        <p>При продаже залогового жилья по банкротству средства распределяются:</p>
-                        <p>• 10% — должнику (но не более суммы первоначального взноса + внесённых платежей)</p>
-                        <p>• 80% — залоговому кредитору</p>
-                        <p>• 10% — на второстепенные долги (например, алименты)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-grid" style="margin-bottom: 60px;">
-                <div class="content-text">
-                    <h3><span>📊</span> Реструктуризация долгов через суд</h3>
-                    <p>Альтернатива банкротству — сохранение платёжеспособности через новый график погашения.</p>
-
-                    <div class="highlight-box">
-                        <strong>Формула расчёта платёжеспособности (2026):</strong>
-                        <p>(Доход − ПМ на себя − ПМ на иждивенцев) × 60 мес = Сумма, которую можно выплатить за 5 лет</p>
-                        <p style="margin-top: 10px; color: #c9a96e;"><em>Пример: федеральный ПМ, доход 60 000 ₽, 1 ребёнок</em></p>
-                        <p>60 000 − 20 644 − 18 378 = <strong style="color: #c9a96e;">20 978 ₽/мес</strong></p>
-                        <p>За 5 лет: <strong style="color: #c9a96e;">1 258 680 ₽</strong></p>
-                    </div>
-
-                    <div class="warning-box">
-                        <strong>⚠️ Важно:</strong>
-                        <p>С 2026 года срок реструктуризации может быть продлён до <strong>5 лет</strong> (ранее — до 3 лет). Суд может отказать в реализации имущества, если долг можно погасить за 5 лет.</p>
-                    </div>
-
-                    <ul>
-                        <li>Срок реструктуризации: до 5 лет</li>
-                        <li>Процентная ставка снижается до ключевой ставки ЦБ</li>
-                        <li>Прекращается начисление пеней и штрафов</li>
-                        <li>Имущество не арестовывается</li>
-                        <li>Можно работать и вести бизнес</li>
-                        <li>Не признаётся банкротом — меньше ограничений</li>
-                        <li>Суды всё чаще утверждают планы вопреки воле кредиторов</li>
-                    </ul>
-                </div>
-
-                <div class="content-text">
-                    <h3><span>📈</span> Восстановление кредитной истории</h3>
-                    <p>После завершения процедуры важно восстановить доверие банков.</p>
-
-                    <div class="highlight-box">
-                        <strong>Что происходит с КИ после банкротства:</strong>
-                        <p>• Запись о банкротстве хранится в БКИ <strong>5 лет</strong></p>
-                        <p>• Все долги отмечаются как погашенные</p>
-                        <p>• После 5 лет — полное удаление информации</p>
-                        <p>• В течение 5 лет обязаны предупреждать банки о статусе</p>
-                    </div>
-
-                    <ul style="margin-top: 20px;">
-                        <li>Оспаривание неправомерных записей в БКИ (НБКИ, Эквифакс, ОКБ)</li>
-                        <li>Проверка и исправление ошибок в кредитном отчёте</li>
-                        <li>Консультации по получению кредитов после процедуры</li>
-                        <li>Рекомендации по формированию положительной кредитной истории</li>
-                    </ul>
-
-                    <p style="margin-top: 20px; color: #888;"><strong style="color: #c9a96e;">⚡ Быстрый старт:</strong> Оформите кредитную карту с небольшим лимитом, тратьте и погашайте вовремя — это формирует положительную историю уже через 3–6 месяцев.</p>
-                </div>
-            </div>
-
-            <div class="content-grid">
-                <div class="content-text">
-                    <h3><span>🛡️</span> Защита семей участников военных действий</h3>
-                    <p>Специальные льготы и гарантии для семей мобилизованных, военнослужащих по контракту, ветеранов боевых действий.</p>
-
-                    <div class="highlight-box">
-                        <strong>Основные льготы:</strong>
-                        <p>• Списание ипотеки при гибели военнослужащего</p>
-                        <p>• Отсрочка по кредитам на время службы</p>
-                        <p>• Запрет взыскания на единственное жильё</p>
-                        <p>• Бесплатная юридическая помощь</p>
-                        <p>• Приоритетное рассмотрение дел в суде</p>
-                        <p>• Налоговые льготы на имущество для семей мобилизованных</p>
-                    </div>
-
-                    <ul style="margin-top: 20px;">
-                        <li>Защита от выселения из единственного жилья</li>
-                        <li>Списание долгов по кредитам при получении статуса инвалида</li>
-                        <li>Освобождение от транспортного налога</li>
-                        <li>Льготы по ЖКХ и коммунальным платежам</li>
-                        <li>Оформление статуса участника боевых действий</li>
-                        <li>Помощь в получении компенсаций и выплат</li>
-                    </ul>
-
-                    <p style="margin-top: 15px; color: #888;"><strong style="color: #c9a96e;">🔴 Важно:</strong> Семьи военных имеют право на бесплатную юридическую помощь в военной прокуратуре. Мы помогаем подготовить все документы и представлять интересы в органах власти.</p>
-                </div>
-
-                <div class="content-text">
-                    <h3><span>⚖️</span> Защита от коллекторов и приставов</h3>
-                    <p>Защита ваших прав от незаконных действий взыскателей.</p>
-
-                    <div class="highlight-box" style="border-left-color: #ff9800;">
-                        <strong style="color: #ff9800;">Что НЕЛЬЗЯ коллекторам (закон № 230-ФЗ):</strong>
-                        <p>• Звонить чаще 1 раза в сутки, 2 раз в неделю, 8 раз в месяц</p>
-                        <p>• Звонить с 22:00 до 8:00 и в выходные</p>
-                        <p>• Общаться с родственниками о долге</p>
-                        <p>• Угрожать, оскорблять, публиковать данные должника</p>
-                        <p>• Посещать дом без согласия</p>
-                    </div>
-
-                    <ul style="margin-top: 20px;">
-                        <li>Составление жалоб на незаконные действия коллекторов</li>
-                        <li>Обращение в Роспотребнадзор и прокуратуру</li>
-                        <li>Снятие арестов со счетов и имущества</li>
-                        <li>Оспаривание неправомерных исполнительных производств</li>
-                        <li>Возврат незаконно списанных средств</li>
-                        <li>Защита в суде при взыскании</li>
-                    </ul>
-
-                    <p style="margin-top: 20px; color: #888;"><strong style="color: #c9a96e;">📞 Экстренная помощь:</strong> Если коллекторы угрожают или нарушают закон — зафиксируйте факт (запись разговора, скриншоты) и обратитесь к нам. Мы подготовим жалобы во все контролирующие органы.</p>
-                </div>
-            </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Какие долги НЕ освобождают от исполнения?
+          <span class="faq-toggle">▼</span>
         </div>
-    </section>
-
-    <!-- Calculator -->
-    <section class="calculator" id="calculator">
-        <div class="container">
-            <h2 style="font-size: 2.2rem; margin-bottom: 10px;">РАССЧИТАЙТЕ <span style="color: #c9a96e;">ПОДХОДЯЩУЮ ПРОЦЕДУРУ</span></h2>
-            <p style="opacity: 0.7; margin-top: 10px;">Ориентировочный расчёт на 2026 год</p>
-
-            <div class="calc-form">
-                <div class="form-group">
-                    <label>Сумма долгов (₽)</label>
-                    <input type="number" id="debtAmount" placeholder="Например: 750000">
-                </div>
-                <div class="form-group">
-                    <label>Есть ли официальный доход?</label>
-                    <select id="hasIncome">
-                        <option value="no">Нет дохода</option>
-                        <option value="yes">Есть официальный доход</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Есть ли имущество?</label>
-                    <select id="hasProperty">
-                        <option value="no">Нет имущества</option>
-                        <option value="yes">Есть квартира/машина/другое</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Регион</label>
-                    <select id="region">
-                        <option>Москва / МО</option>
-                        <option>Санкт-Петербург</option>
-                        <option>Другой регион (федеральный ПМ)</option>
-                    </select>
-                </div>
-                <button class="btn" onclick="calculate()" style="width: 100%; margin-top: 10px;">
-                    <span class="btn-icon">🧮</span>
-                    РАССЧИТАТЬ
-                </button>
-
-                <div id="result" style="margin-top: 25px; padding: 25px; background: rgba(17,17,17,0.9); border-radius: 10px; border: 1px solid #333; display: none;">
-                    <h4 style="color: #c9a96e; margin-bottom: 15px; font-size: 1.2rem;">Рекомендуемый вариант:</h4>
-                    <p id="resultText" style="color: #e0e0e0; line-height: 1.7;"></p>
-                    <p style="margin-top: 15px; font-weight: bold; color: #c9a96e; font-size: 1.1rem;" id="resultPrice"></p>
-                    <p style="margin-top: 10px; font-size: 0.85rem; color: #666;" id="resultWarning"></p>
-                </div>
-            </div>
-
-            <div style="margin-top: 20px; font-size: 0.8rem; opacity: 0.5;">
-                Расчёт носит ориентировочный характер. Точная стоимость определяется после индивидуальной консультации.
-            </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Не подлежат освобождению: алименты, компенсация вреда здоровью или жизни, не выплаченная зарплата работникам (для ИП), субсидиарная ответственность, некоторые административные штрафы. Все остальные долги — кредиты, микрозаймы, ЖКХ, налоги, штрафы ГИБДД — могут быть включены.
+          </div>
         </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <h2 class="section-title">ЧАСТЫЕ <span>ВОПРОСЫ</span></h2>
-
-            <div class="faq-item active">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Можно ли списать долги по ипотеке?</span>
-                    <span>▼</span>
-                </div>
-                <div class="faq-answer">
-                    Единственное жильё, приобретённое за счёт ипотечных средств, не подлежит реализации. Долг может быть реструктуризирован или включён в план реструктуризации. С 3 апреля 2026 года при продаже залогового жилья: 10% — должнику, 80% — банку, 10% — на второстепенные долги. Для семей военных — дополнительные льготы.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Что будет с кредитной историей после банкротства?</span>
-                    <span>▼</span>
-                </div>
-                <div class="faq-answer">
-                    Запись о банкротстве хранится в БКИ 5 лет. Все долги отмечаются как погашенные. После 5 лет — полное удаление. В течение 5 лет при получении кредита обязаны предупреждать банк о статусе.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Можно ли банкротиться повторно?</span>
-                    <span>▼</span>
-                </div>
-                <div class="faq-answer">
-                    По собственному заявлению — не ранее чем через 5 лет после завершения предыдущей процедуры. Если кредиторы инициируют — ограничений по срокам нет.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Сколько стоит банкротство в 2026 году?</span>
-                    <span>▼</span>
-                </div>
-                <div class="faq-answer">
-                    Обязательные расходы: госпошлина 300 ₽ + депозит суда 25 000 ₽. Услуги юриста: от 50 000 ₽ (внесудебное) до 200 000–300 000 ₽ (судебное «под ключ»). Внесудебное банкротство через МФЦ дешевле — без оплаты управляющего. С 2026 года часть справок собирается автоматически через ЕФРСБ.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Какие долги НЕ освобождают от исполнения?</span>
-                    <span>▼</span>
-                </div>
-                <div class="faq-answer">
-                    Не подлежат освобождению: алименты, компенсация вреда здоровью или жизни, не выплаченная зарплата работникам (для ИП), субсидиарная ответственность, некоторые административные штрафы. Все остальные долги — кредиты, микрозаймы, ЖКХ, налоги, штрафы ГИБДД — могут быть включены.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Какие льготы у семей участников военных действий?</span>
-                    <span>▼</span>
-                </div>
-                <div class="faq-answer">
-                    Семьи мобилизованных и военнослужащих имеют право на: отсрочку по кредитам на время службы, списание ипотеки при гибели, защиту от выселения из единственного жилья, бесплатную юридическую помощь, приоритетное рассмотрение дел, льготы по ЖКХ и налогам, налоговые льготы на имущество для семей мобилизованных.
-                </div>
-            </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Какие льготы у семей участников военных действий?
+          <span class="faq-toggle">▼</span>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section" id="contacts">
-        <div class="container">
-            <h2>СВЯЖИТЕСЬ <span>С НАМИ</span></h2>
-            <p style="margin-top: 10px; opacity: 0.7;">Бесплатная консультация. Работаем по всей России.</p>
-
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">📞</div>
-                    <h3>Телефон</h3>
-                    <a href="tel:+79022513181">+7 (902) 251-31-81</a>
-                    <p>Пн–Пт, 10:00 – 18:00 (МСК)</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">💬</div>
-                    <h3>WhatsApp</h3>
-                    <a href="https://wa.me/79022513181">+7 (902) 251-31-81</a>
-                    <p>Пишите в любое время</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">✈️</div>
-                    <h3>Telegram</h3>
-                    <a href="https://t.me/yuristVSdolgi">@yuristVSdolgi</a>
-                    <p>Канал и личные сообщения</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">✉️</div>
-                    <h3>Email</h3>
-                    <a href="mailto:pro.agency.kgd39@gmail.com" style="font-size: 0.85rem;">pro.agency.kgd39<br>@gmail.com</a>
-                    <p>Ответ в течение 24 часов</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 50px;">
-                <a href="tel:+79022513181" class="btn">
-                    <span class="btn-icon">📞</span>
-                    ПОЗВОНИТЬ
-                </a>
-                <a href="https://wa.me/79022513181" class="btn btn-outline">
-                    <span class="btn-icon">💬</span>
-                    WHATSAPP
-                </a>
-                <a href="https://t.me/yuristVSdolgi" class="btn btn-dark">
-                    <span class="btn-icon">✈️</span>
-                    TELEGRAM
-                </a>
-            </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Семьи мобилизованных и военнослужащих имеют право на: отсрочку по кредитам на время службы, списание ипотеки при гибели, защиту от выселения из единственного жилья, бесплатную юридическую помощь, приоритетное рассмотрение дел, льготы по ЖКХ и налогам, налоговые льготы на имущество для семей мобилизованных.
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h4>Услуги</h4>
-                    <a href="#">Банкротство физических лиц</a>
-                    <a href="#">Реструктуризация долгов</a>
-                    <a href="#">Восстановление кредитной истории</a>
-                    <a href="#">Защита от коллекторов</a>
-                    <a href="#">Семьи военных</a>
-                </div>
-                <div>
-                    <h4>Информация</h4>
-                    <a href="#">Статьи о банкротстве</a>
-                    <a href="#">Закон 127-ФЗ</a>
-                    <a href="#">Судебная практика</a>
-                    <a href="#">Частые вопросы</a>
-                    <a href="#">Контакты</a>
-                </div>
-                <div>
-                    <h4>Контакты</h4>
-                    <a href="tel:+79022513181">📞 +7 (902) 251-31-81</a>
-                    <a href="https://wa.me/79022513181">💬 WhatsApp</a>
-                    <a href="https://t.me/yuristVSdolgi">📱 Telegram: @yuristVSdolgi</a>
-                    <a href="mailto:pro.agency.kgd39@gmail.com">✉️ pro.agency.kgd39@gmail.com</a>
-                    <a href="#">🕐 Пн–Пт: 10:00 – 18:00 (МСК)</a>
-                    <a href="#">📍 Работаем по всей России</a>
-                </div>
-            </div>
-            <p style="border-top: 1px solid #222; padding-top: 30px; opacity: 0.5; font-size: 0.85rem;">
-                © 2026 Правовая Защита. Все права защищены. Информация не является публичной офертой.<br>
-                Банкротство влечёт негативные последствия, в том числе ограничения на получение кредита и повторное банкротство в течение пяти лет. Предварительно обратитесь к своему кредитору и в МФЦ.
-            </p>
-        </div>
-    </footer>
+  <section id="contacts">
+    <div class="cta-section">
+      <h2>Свяжитесь с нами</h2>
+      <p>Бесплатная консультация. Работаем по всей России.</p>
+      <a href="tel:+7XXXXXXXXXX" class="btn">📞 Позвонить</a>
+      <p style="margin-top:24px; font-size:14px; opacity:0.8;">
+        Или напишите нам: <a href="mailto:info@elauditor-ai.github.io" style="color:var(--white); text-decoration:underline;">info@elauditor-ai.github.io</a>
+      </p>
+    </div>
+  </section>
 
-    <script>
-        // FAQ Toggle
-        function toggleFaq(element) {
-            const item = element.parentElement;
-            const allItems = document.querySelectorAll('.faq-item');
-            allItems.forEach(i => {
-                if (i !== item) i.classList.remove('active');
-            });
-            item.classList.toggle('active');
-        }
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>⚖️ Правовая Защита</h3>
+        <p>Юридические услуги по банкротству физических лиц, реструктуризации долгов, защите от коллекторов. Работаем по всей России.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Услуги</h4>
+        <ul>
+          <li><a href="#services">Судебное банкротство</a></li>
+          <li><a href="#services">Внесудебное банкротство</a></li>
+          <li><a href="#services">Реструктуризация долгов</a></li>
+          <li><a href="#services">Защита от коллекторов</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Информация</h4>
+        <ul>
+          <li><a href="#info">127-ФЗ о банкротстве</a></li>
+          <li><a href="#info">Банкротство через МФЦ</a></li>
+          <li><a href="#info">Реструктуризация</a></li>
+          <li><a href="#faq">Частые вопросы</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX-XX-XX</a></li>
+          <li><a href="mailto:info@elauditor-ai.github.io">info@elauditor-ai.github.io</a></li>
+          <li><a href="#">Telegram</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Правовая Защита. Все права защищены. Информация не является публичной офертой.
+    </div>
+  </footer>
 
-        // Calculator
-        function calculate() {
-            const debt = parseInt(document.getElementById('debtAmount').value) || 0;
-            const income = document.getElementById('hasIncome').value;
-            const property = document.getElementById('hasProperty').value;
-            const result = document.getElementById('result');
-            const resultText = document.getElementById('resultText');
-            const resultPrice = document.getElementById('resultPrice');
-            const resultWarning = document.getElementById('resultWarning');
+  <script>
+    // FAQ Toggle
+    function toggleFaq(element) {
+      const item = element.parentElement;
+      const wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      if (!wasActive) item.classList.add('active');
+    }
 
-            let recommendation = '';
-            let price = '';
-            let warning = 'Расчёт ориентировочный. Точная стоимость определяется после индивидуальной консультации. Банкротство влечёт негативные последствия, включая ограничения на получение кредита в течение 5 лет.';
+    // Calculator
+    function calculateProcedure() {
+      const debt = parseInt(document.getElementById('debtAmount').value) || 0;
+      const income = document.getElementById('hasIncome').value;
+      const property = document.getElementById('hasProperty').value;
+      const resultDiv = document.getElementById('calcResult');
 
-            if (debt < 250000) {
-                recommendation = 'При сумме долга менее 250 000 ₽ процедура банкротства может быть невыгодна из-за расходов. Рекомендуем досудебное урегулирование с кредиторами или мировое соглашение.';
-                price = 'Стоимость консультации: бесплатно. Юрист по урегулированию: от 15 000 ₽';
-            } else if (debt >= 250000 && debt <= 1000000 && income === 'no' && property === 'no') {
-                recommendation = 'Идеальный вариант — внесудебное банкротство через МФЦ. Минимальные затраты, быстрый срок, не требуется оплата финансового управляющего. С 2026 года порог — до 1 000 000 ₽.';
-                price = 'Обязательные расходы: ~300 ₽ (госпошлина). Юрист: от 50 000 ₽';
-            } else if (income === 'yes' && debt < 1500000) {
-                recommendation = 'Рекомендуем судебную реструктуризацию долгов. Сохраните имущество, снизьте проценты до ставки ЦБ, расплатитесь за 3–5 лет без процедуры банкротства.';
-                price = 'Обязательные расходы: 25 300 ₽ (депозит + пошлина). Юрист: от 60 000 ₽';
-            } else {
-                recommendation = 'Оптимальный вариант — судебное банкротство. Освобождение от исполнения обязательств за 6–12 месяцев. Единственное жильё сохранится (если не в залоге).';
-                price = 'Обязательные расходы: 25 300 ₽. Юрист: от 80 000 ₽';
-            }
+      if (!debt || !income || !property) {
+        resultDiv.innerHTML = '⚠️ Пожалуйста, заполните все поля';
+        resultDiv.classList.add('show');
+        return;
+      }
 
-            resultText.textContent = recommendation;
-            resultPrice.textContent = price;
-            resultWarning.textContent = warning;
-            result.style.display = 'block';
-        }
+      let recommendation = '';
+      let procedure = '';
+      let cost = '';
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
+      if (debt <= 1000000 && income === 'no' && property === 'no') {
+        procedure = 'Внесудебное банкротство через МФЦ';
+        recommendation = 'Вам подходит упрощённая процедура без суда. Минимальные затраты, срок до 6 месяцев.';
+        cost = 'Примерная стоимость: от 50 000 ₽ (с юристом)';
+      } else if (debt > 500000 && (income === 'yes' || property === 'yes')) {
+        procedure = 'Судебное банкротство (127-ФЗ)';
+        recommendation = 'Требуется процедура через арбитражный суд. Полное освобождение от долгов, сохранение жилья.';
+        cost = 'Примерная стоимость: от 200 000 ₽ (под ключ)';
+      } else if (income === 'yes' && debt < 2000000) {
+        procedure = 'Реструктуризация долгов';
+        recommendation = 'Альтернатива банкротству — новый график платежей до 5 лет. Сохранение кредитной истории.';
+        cost = 'Примерная стоимость: от 100 000 ₽';
+      } else {
+        procedure = 'Индивидуальная консультация';
+        recommendation = 'Ваша ситуация требует детального анализа. Запишитесь на бесплатную консультацию.';
+        cost = 'Бесплатная консультация';
+      }
+
+      resultDiv.innerHTML = '<strong style="color:var(--accent); font-size:22px;">' + procedure + '</strong><br><br>' + recommendation + '<br><br><em>' + cost + '</em>';
+      resultDiv.classList.add('show');
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+      const nav = document.querySelector('.nav-links');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.top = '70px';
+      nav.style.left = '0';
+      nav.style.right = '0';
+      nav.style.background = 'var(--white)';
+      nav.style.padding = '20px';
+      nav.style.boxShadow = 'var(--shadow)';
+    });
+  </script>
 </body>
 </html>
