@@ -1255,22 +1255,28 @@
       }, 300);
       e.target.reset();
     } else {
-      // Fallback: открываем Telegram с готовым сообщением
+      // Fallback: API заблокирован — показываем кнопки выбора мессенджера
       btn.textContent = '✓ Заявка подготовлена!';
       btn.style.background = 'var(--success)';
 
-      setTimeout(() => {
-        const choice = confirm('📱 Выберите, куда отправить заявку:\n\n[OK] → Telegram\n[Отмена] → WhatsApp');
-        if (choice) {
-          window.open(tgUrl, '_blank');
-        } else {
-          window.open(waUrl, '_blank');
-        }
-        e.target.reset();
-        btn.textContent = originalText;
-        btn.disabled = false;
-        btn.style.background = '';
-      }, 500);
+      // Показываем кастомное модальное окно вместо confirm()
+      const modalHtml = '<div id="tgModal" style="position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:9999;display:flex;align-items:center;justify-content:center;">' +
+        '<div style="background:#fff;border-radius:16px;padding:32px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);">' +
+        '<h3 style="font-size:22px;color:#1a3a5c;margin-bottom:12px;">📱 Выберите мессенджер</h3>' +
+        '<p style="color:#5a6a7a;margin-bottom:24px;font-size:15px;">Заявка готова! Выберите, куда отправить:</p>' +
+        '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">' +
+        '<a href="' + tgUrl + '" target="_blank" onclick="closeTgModal()" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:#0088cc;color:#fff;border-radius:50px;text-decoration:none;font-weight:600;font-size:15px;">💬 Telegram</a>' +
+        '<a href="' + waUrl + '" target="_blank" onclick="closeTgModal()" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:#25d366;color:#fff;border-radius:50px;text-decoration:none;font-weight:600;font-size:15px;">📱 WhatsApp</a>' +
+        '</div>' +
+        '<button onclick="closeTgModal()" style="margin-top:20px;background:none;border:none;color:#999;cursor:pointer;font-size:14px;">Закрыть</button>' +
+        '</div></div>';
+
+      document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+      e.target.reset();
+      btn.textContent = originalText;
+      btn.disabled = false;
+      btn.style.background = '';
     }
   }
 
@@ -1321,6 +1327,7 @@
     }
   });
   function closeModal() { document.getElementById('exitModal').classList.remove('show'); }
+  function closeTgModal() { const m = document.getElementById('tgModal'); if (m) m.remove(); }
   document.getElementById('exitModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
 
   // ===== URGENCY TIMER =====
