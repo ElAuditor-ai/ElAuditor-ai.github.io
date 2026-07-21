@@ -1183,20 +1183,123 @@
   }
 
   // ===== FORM HANDLING =====
-  function handleSubmit(e) {
+  // ===== TELEGRAM BOT CONFIG =====
+  // ЗАМЕНИТЕ ЭТИ ЗНАЧЕНИЯ ПОСЛЕ СОЗДАНИЯ БОТА:
+  const BOT_TOKEN = '8742944703:AAHJ_eJ5NVfEyrgOAA1RDkfcwhcYJPCC0Ns';
+  const CHAT_ID = '8687883720';
+
+  async function handleSubmit(e) {
     e.preventDefault();
     const btn = e.target.querySelector('button[type="submit"]');
-    btn.textContent = '✓ Заявка отправлена!';
+    const originalText = btn.textContent;
+
+    // Проверяем, заполнены ли токен и chat_id
+    if (BOT_TOKEN.includes('ВАШ_') || CHAT_ID.includes('ВАШ_')) {
+      alert('⚠️ Настройте бота!\n\n1. Создайте бота через @BotFather\n2. Получите Chat ID через @userinfobot\n3. Вставьте значения в код (строки BOT_TOKEN и CHAT_ID)');
+      return;
+    }
+
+    btn.textContent = '⏳ Отправка...';
     btn.disabled = true;
-    btn.style.background = 'var(--success)';
-    console.log('Lead:', { name: document.getElementById('name').value, phone: document.getElementById('phone').value, region: document.getElementById('region').value, comment: document.getElementById('comment').value, quiz: quizAnswers });
-    setTimeout(() => alert('Спасибо! Юрист перезвонит вам в течение 15 минут.'), 500);
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const region = document.getElementById('region').value;
+    const comment = document.getElementById('comment').value;
+
+    // Формируем красивое сообщение
+    let message = '📌 <b>НОВАЯ ЗАЯВКА С САЙТА</b>\n';
+    message += '━━━━━━━━━━━━━━━━━━━━━\n\n';
+    message += '👤 <b>Имя:</b> ' + (name || 'Не указано') + '\n';
+    message += '📞 <b>Телефон:</b> ' + phone + '\n';
+    message += '📍 <b>Регион:</b> ' + (region || 'Не указан') + '\n';
+
+    // Добавляем результаты квиза, если есть
+    if (quizAnswers.debt) {
+      message += '\n📊 <b>Результаты квиза:</b>\n';
+      message += '• Сумма долгов: ' + quizAnswers.debt + '\n';
+      if (quizAnswers.income) message += '• Доход: ' + quizAnswers.income + '\n';
+      if (quizAnswers.property) message += '• Имущество: ' + quizAnswers.property + '\n';
+      if (quizAnswers.delay) message += '• Просрочка: ' + quizAnswers.delay + '\n';
+      if (quizAnswers.pain) message += '• Проблема: ' + quizAnswers.pain + '\n';
+    }
+
+    if (comment) {
+      message += '\n💬 <b>Комментарий:</b>\n' + comment + '\n';
+    }
+
+    message += '\n━━━━━━━━━━━━━━━━━━━━━\n';
+    message += '🕐 ' + new Date().toLocaleString('ru-RU') + '\n';
+    message += '🌐 elauditor-ai.github.io';
+
+    try {
+      const response = await fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: message,
+          parse_mode: 'HTML'
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.ok) {
+        btn.textContent = '✓ Заявка отправлена!';
+        btn.style.background = 'var(--success)';
+
+        // Показываем контакты для быстрой связи
+        setTimeout(() => {
+          alert('✅ Заявка отправлена!\n\nЮрист перезвонит вам в течение 15 минут.\n\nТакже можете написать сразу:\n💬 Telegram: @yuristVSdolgi\n📱 WhatsApp: +7 (902) 251-31-81');
+        }, 300);
+
+        // Очищаем форму
+        e.target.reset();
+      } else {
+        throw new Error(data.description);
+      }
+    } catch (error) {
+      console.error('Ошибка отправки:', error);
+      btn.textContent = '❌ Ошибка отправки';
+      btn.style.background = 'var(--danger)';
+
+      setTimeout(() => {
+        alert('❌ Не удалось отправить заявку автоматически.\n\nПозвоните напрямую:\n📞 +7 (902) 251-31-81\n💬 Telegram: @yuristVSdolgi\n📱 WhatsApp: +7 (902) 251-31-81');
+        btn.textContent = originalText;
+        btn.disabled = false;
+        btn.style.background = '';
+      }, 500);
+    }
   }
 
-  function handleEmailSubmit(e) {
+  async function handleEmailSubmit(e) {
     e.preventDefault();
-    closeModal();
-    alert('Чек-лист отправлен на ваш email!');
+    const email = e.target.querySelector('input[type="email"]').value;
+
+    if (BOT_TOKEN.includes('ВАШ_') || CHAT_ID.includes('ВАШ_')) {
+      closeModal();
+      alert('⚠️ Чек-лист пока не настроен.\n\nНапишите нам в Telegram @yuristVSdolgi — вышлем вручную!');
+      return;
+    }
+
+    const message = '📧 <b>НОВЫЙ EMAIL ДЛЯ ЧЕК-ЛИСТА</b>\n\n' +
+      '✉️ Email: ' + email + '\n' +
+      '🕐 ' + new Date().toLocaleString('ru-RU') + '\n' +
+      '🌐 elauditor-ai.github.io';
+
+    try {
+      await fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: CHAT_ID, text: message, parse_mode: 'HTML' })
+      });
+      closeModal();
+      alert('✅ Чек-лист будет отправлен на ' + email + ' в ближайшее время!');
+    } catch (err) {
+      closeModal();
+      alert('⚠️ Записали ваш email. Напишите нам в Telegram @yuristVSdolgi — вышлем чек-лист вручную!');
+    }
   }
 
   // ===== EXIT INTENT =====
